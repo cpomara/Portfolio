@@ -6,7 +6,6 @@ About This Project
 
 This portfolio is built with a modern tech stack and features a clean, responsive design to ensure a seamless user experience across devices. It includes:
 
-    Home Page: An introduction to who I am, my skills, and my career highlights.
     Projects: A detailed showcase of my key projects, including descriptions, technologies used, and links to live demos and source code.
     Resume: A downloadable version of my resume for easy access to my professional background.
     Contact: Links to my social media profiles and a contact form for reaching out to me directly.
