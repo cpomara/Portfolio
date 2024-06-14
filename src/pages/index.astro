@@ -1,0 +1,29 @@
+---
+import Header from '../components/Header.astro';
+import Main from '../components/Main.astro';
+import Tech from '../components/TechStack.astro';
+import Projects from '../components/Projects.astro';
+import Contacts from '../components/Contacts.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+		<title>Carlos Pombo - Developer</title>
+	</head>
+	<body class="flex items-center flex-col  w-screen  overflow-x-hidden">
+		
+		<Main/>
+		<Header />
+		<Tech />
+		<Projects />
+		<Contacts />
+		<Footer />
+		
+	</body>
+</html>

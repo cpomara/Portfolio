@@ -1,0 +1,35 @@
+
+<section class="h-auto w-full  bg-blue-600 mt-40 flex flex-col items-center  min-w-screen" id="contacts">
+
+    <div class="flex flex-col gap-8">
+        <h3 class="text-3xl font-bold text-white pt-10">Do you want to get in touch?</h3>
+        <form class="flex flex-col " id="contactForm">
+            <label class="font-bold text-white text-xl -mb-5" for="subject" >Affair:</label><br>
+            <input class="rounded-full pl-3 py-1 hover:bg-gray-200 border-sold border-black border-2" type="text" id="subject" name="subject"><br>
+            <label class="font-bold text-white text-xl -mb-5" for="message" >Message:</label><br>
+            <textarea class="rounded pl-3 py-1 hover:bg-gray-200 border-sold border-black border-2" id="message" name="message"></textarea><br>
+            <div class="flex justify-center items-center">
+                 <button class="font-bold text-white text-xl rounded-full w-28 h-10  bg-black hover:bg-white hover:text-black my-4 " type="submit">Submit</button>
+            </div>
+        </form>
+    </div> 
+    
+
+</section>
+
+<script>
+    window.onload = function() {
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+            
+            var mailtoLink = 'mailto:cpomara.proyectos@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(message);
+
+            console.log(document.getElementById('subject'));
+            
+            window.location.href = mailtoLink;
+        });
+    };
+</script>

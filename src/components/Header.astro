@@ -1,0 +1,59 @@
+---
+---
+
+
+<header  id='header' class=" z-10 border-y-4 rounded-b-3xl  min-w-1 max-w-6xl transition ease-in duration-200 sticky top-0 border-blue-600  bg-white border-solid py-4 -mt-40 px-6 w-full">
+    <nav >
+        <ul class="flex  justify-between text-2xl">
+            <li   class="transition border-l-4 pl-2 border-transparent hover:border-black hover:font-bold hover:text-2xl cursor-pointer">
+                <a href="#home">Home</a>
+            </li>
+            <li  class="transition border-l-4 pl-2 border-transparent hover:border-black hover:font-bold hover:text-2xl cursor-pointer">
+                <a href="#projects">Projects</a>
+            </li>
+            <li class="transition border-l-4 pl-2 border-transparent hover:border-black hover:font-bold hover:text-2xl cursor-pointer">
+                <a href="#contacts">Contacts</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<script>
+    const navbarTopClasses = ['bg-blue-600','text-white','shadow-lg','shadow-gray-900'];
+    const navbarFloatingClasses = ['bg-white'];
+
+    const itemsTopClasses = ['hover:border-white'];
+    const itemsFloatingClasses = ['hover:border-black'];
+    
+
+
+
+    window.addEventListener('scroll', function() {
+      var header = document.getElementById('header');
+      const items = document.querySelectorAll('li');
+      var distanciaAlTop = header.getBoundingClientRect().top; 
+  
+      if (distanciaAlTop <= 0) {
+        header.classList.remove(...navbarFloatingClasses);
+        header.classList.add(...navbarTopClasses); 
+        
+        items.forEach( item =>{
+            item.classList.remove(...itemsFloatingClasses);     
+            item.classList.add(...itemsTopClasses); 
+        });
+
+      } else {
+        
+        header.classList.remove(...navbarTopClasses);
+        header.classList.add(...navbarFloatingClasses); 
+
+        items.forEach( item =>{
+            item.classList.remove(...itemsTopClasses);     
+            item.classList.add(...itemsFloatingClasses); 
+        });
+      }
+    });
+  </script>
+
+  
